@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Magic 8-Ball</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="about_text">
+        This Magic 8-ball answers you when \n
+        you turn the device upside down and \n
+        wait until it vibrates. After you can \n
+        turn the device in normal position.\n
+        Enjoy!</string>
+
+
+    <string-array name="responses">
+        <item>That's your\n prerogative</item>
+        <item>You guys, I\n have no idea</item>
+        <item>Ask again,\n if you will</item>
+        <item>Google is your\n greatest resource</item>
+        <item>Yes, take\n some initiative</item>
+        <item>My boss would kill me\n if you did that</item>
+        <item>YES MY BROTHA</item>
+        <item>Check Schoology</item>
+        <item>No, next time read\n the directions</item>
+        <item>I made a youtube video\n for this question</item>
+        <item>Lets talk\n about that</item>
+        <item>If you'll just hold your\n questions for a bit</item>
+        <item>STOP PLAYING SNAKE</item>
+        <item>Well is the bathroom\n pass on the hook?</item>
+    </string-array>
+</resources>
