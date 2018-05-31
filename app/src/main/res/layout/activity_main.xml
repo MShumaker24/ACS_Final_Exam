@@ -5,39 +5,57 @@
     android:background="#ffffffff"
     tools:context=".MainActivity">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/eight_ball"
-        android:src="@drawable/eightball"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="center"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/eight_ball"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:src="@drawable/eightball" />
 
-         <TextView
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+             <TextView
+                android:id="@+id/prediction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentTop="false"
+                android:layout_gravity="center"
+                android:gravity="center_vertical|center"
+                android:text="Shake Me"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Shake Me"
-            android:id="@+id/prediction"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFFFF"
+            android:onClick="phraseArray"
+            android:text="Answer Question"
             android:textColor="#000000"
-            android:textAlignment="center"
-            android:gravity="center_vertical|center"
-            android:layout_alignParentTop="false"
-            android:layout_alignParentBottom="false"
-            android:layout_gravity="center"
             android:textStyle="bold"
-            android:textSize="20sp" />
-    </LinearLayout>
+            />
 
+    </RelativeLayout>
 </FrameLayout>
