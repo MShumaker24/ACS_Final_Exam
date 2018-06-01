@@ -46,24 +46,14 @@
         </LinearLayout>
 
         <Button
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:background="#FFFFFF"
             android:onClick="phraseArray"
             android:text="Answer Question"
-            android:textColor="#000000"
-<<<<<<< HEAD
-            android:textAlignment="center"
-            android:gravity="center_vertical|center"
-            android:layout_gravity="center"
-            android:textSize="20sp"/>
-    </LinearLayout>
-=======
-            android:textStyle="bold"
-            />
->>>>>>> 1c7ee7a70d27bfe8f05579a9217dd362ab566b79
-
+            android:textColor="#000000">
+        </Button>
     </RelativeLayout>
 </FrameLayout>

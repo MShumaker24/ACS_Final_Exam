@@ -9,6 +9,7 @@ import android.media.Image;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -35,21 +36,21 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private int shakeCount = 0;
     private TextView msgTv;
     private ImageView ballAnimation;
-    private Animation ballAnimation;
+    //private Animation ballAnimation;
     private ArrayList<String> answers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ball = (ImageView) findViewById(R.id.ball);
-        msgTv = (TextView) findViewById(R.id.msgTv);
+        //ball = (ImageView) findViewById(R.id.ball);
+        //msgTv = (TextView) findViewById(R.id.msgTv);
 
         vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         sensorManger = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManger.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         ballAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
-        answers = loadAnswers();
+        //answers = loadAnswers();
     }
 
     @Override
@@ -62,14 +63,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     }
 
-    private int getStringFromArray() {
-        String[] phrases = {"That's your\\n prerogative", "You guys, I\\n have no idea", "Ask again,\\n if you will", "Google is your\\n greatest resource", "Yes, take\\n some initiative", "My boss would kill me\\n if you did that",
-                "YES MY BROTHA", "Check Schoology", "No, next time read\\n the directions", "I made a youtube video\\n for this question", "Lets talk\\n about that", "If you'll just hold your\\n questions for a bit", "STOP PLAYING SNAKE",
-                "Well is the bathroom\\n pass on the hook?"};
+    private void phraseArray(View view) {
+        String[] phrases = {"That's your\n prerogative", "You guys, I\n have no idea", "Ask again \n if you will", "Google is your\n greatest resource", "Yes, take\n some initiative", "My boss would kill me\n if you did that",
+                "YES MY BROTHA", "Check Schoology", "No, next time read\n the directions", "I made a youtube video\n for this question", "Lets talk\n about that", "If you'll just hold your\n questions for a bit", "STOP PLAYING SNAKE",
+                "Well is the bathroom\n pass on the hook?"};
+        TextView phraseView = findViewById(R.id.prediciton);
         double pick = Math.random();
         pick = pick * 14;
-        pick = (int) pick;
-        phrases[pick];
-        return phrases;
+        int pickIndex = (int) pick;
+        phraseView.setText(phrases[pickIndex]);
     }
 }
