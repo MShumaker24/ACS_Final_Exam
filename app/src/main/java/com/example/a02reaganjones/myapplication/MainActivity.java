@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         sensorManger = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManger.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        ballAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
+        //ballAnimation = AnimationUtils.loadAnimation(this, R.anim.shake);
         //answers = loadAnswers();
     }
 
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         String[] phrases = {"That's your\n prerogative", "You guys, I\n have no idea", "Ask again \n if you will", "Google is your\n greatest resource", "Yes, take\n some initiative", "My boss would kill me\n if you did that",
                 "YES MY BROTHA", "Check Schoology", "No, next time read\n the directions", "I made a youtube video\n for this question", "Lets talk\n about that", "If you'll just hold your\n questions for a bit", "STOP PLAYING SNAKE",
                 "Well is the bathroom\n pass on the hook?"};
-        TextView phraseView = findViewById(R.id.prediciton);
+        TextView phraseView = findViewById(R.id.prediction);
         double pick = Math.random();
         pick = pick * 14;
         int pickIndex = (int) pick;
