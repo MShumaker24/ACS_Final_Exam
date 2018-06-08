@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffffff"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" >
 
         <ImageView
             android:id="@+id/eight_ball"
@@ -26,17 +26,15 @@
             android:layout_height="fill_parent"
             android:layout_gravity="center"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
              <TextView
                 android:id="@+id/prediction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="false"
-                android:layout_alignParentTop="false"
-                android:layout_gravity="center"
+                 android:layout_gravity="center"
                 android:gravity="center_vertical|center"
-                android:text="Shake Me"
+                android:text="@string/shakeMeText"
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#000000"
@@ -52,8 +50,10 @@
             android:layout_centerHorizontal="true"
             android:background="#FFFFFF"
             android:onClick="phraseArray"
-            android:text="Answer Question"
-            android:textColor="#000000">
-        </Button>
+            android:text="@string/answer"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
     </RelativeLayout>
+
 </FrameLayout>
