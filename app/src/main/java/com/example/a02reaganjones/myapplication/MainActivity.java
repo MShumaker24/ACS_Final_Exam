@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -60,6 +61,22 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         MenuInflater menuInflater = getMenuInflater();
         //menuInflater.inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.shake:
+                showAnswer(getAsnwer(), true);
+                return true;
+        }
+        return false;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sensorManger.registerListener(this, sensor, SensorManager.SENSOR_DELAY_UI);
     }
 
     @Override
