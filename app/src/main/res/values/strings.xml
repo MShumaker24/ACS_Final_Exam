@@ -10,7 +10,8 @@
         wait until it vibrates. After you can \n
         turn the device in normal position.\n
         Enjoy!</string>
-
+    <string name="shakeMeText">Shake Me!</string>
+    <string name="answer">Answer Question</string>
 
     <string-array name="responses">
         <item>That's your\n prerogative</item>
